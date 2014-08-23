@@ -1,18 +1,23 @@
+span, br, small {display: none;}
+* {padding: 0; margin: 0;}
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
   background-size: cover;
   background-image: url(img/bg-16-2.jpg);
   color: rgba(255, 255, 255, .8);
   font-size:16px;
   font-family: 'Megrim', sans-serif;
-  display: flex;
 }
 main {
   margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: stretch;
+
+  text-align: center;
 
   -webkit-animation: fade-in 2s;
      -moz-animation: fade-in 2s;
@@ -20,74 +25,63 @@ main {
        -o-animation: fade-in 2s;
           animation: fade-in 2s;
 }
-
-span {
-  letter-spacing: 6px
-}
-nav {
-  order: -1;
-  display: flex;
-  align-items: stretch;
+h1 {
+  font-size: 7.5em;
 }
 ul {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.2em 1em 1.2em 0;
-  margin-right: 2.6em;
-  position: relative;
+  flex-grow: 1;
+  justify-content: space-around;
 }
-ul::after {
-  content: " ";
-  position: absolute;
-  top: 5px;right: 5px;left: 10px;bottom: 5px;
-  border: 5px solid rgba(255,255,255,.5);
-  border-left: none;
-  z-index: -1;
-  transition: border-color .6s;
-}
-ul:hover::after {
-  border-color: rgba(255,255,255,.8);
-}
-ul li {
-  transition: color .3s;
-}
-ul li:hover {
- color: white;
+nav {
+  margin-top: 2em;
+  display: flex;
+  align-items: stretch;
 }
 li {
+  transition: color .3s;
   list-style-type: none;
 }
-li a,
-li a:active{
+li:hover {
+ color: white;
+}
+a, a:active{
   color: inherit;
 }
-small { display: none}
-h1 {
-  font-size: 7.5em;
-  margin: 0;
-}
-@media only screen and (max-width: 650px) {
-  .full-name, br {display: none;}
+@media only screen and (min-width: 800px) and (min-height: 500px) {
+  span, br {display: initial;}
   main {
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5px;
-  }
-  nav {order: 0;}
-  ul {
+    text-align: left;
     flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    margin: 0;
-    margin-top: 5em;
-    padding: 0;
-    flex-grow: 1;
   }
-  ul::after{display: none;}
+  nav {
+    order: -1;
+    margin-top: 0;
+  }
+  .space {
+    /* Get that perfect wedge shape off of "august" */
+    letter-spacing: 6px
+  }
+  ul {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2em 1em 1.2em 0;
+    margin-right: 2.6em;
+    position: relative;
+  }
+  ul::after {
+    content: " ";
+    position: absolute;
+    top: 5px;right: 5px;left: 10px;bottom: 5px;
+    border: 5px solid rgba(255,255,255,.5);
+    border-left: none;
+    z-index: -1;
+    transition: border-color .6s;
+  }
+  ul:hover::after {
+    border-color: rgba(255,255,255,.8);
+  }
 }
-
 @keyframes fade-in {
   from {opacity: 0;}
   to   {opacity: 1;}
