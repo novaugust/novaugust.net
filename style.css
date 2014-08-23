@@ -1,5 +1,5 @@
-span, br, small {display: none;}
 * {padding: 0; margin: 0;}
+span, br, small {display: none;}
 body {
   width: 100vw;
   height: 100vh;
@@ -50,6 +50,7 @@ a, a:active{
   color: inherit;
 }
 @media only screen and (min-width: 800px) and (min-height: 500px) {
+  body {font-size: 16px;}
   span, br {display: initial;}
   main {
     text-align: left;
