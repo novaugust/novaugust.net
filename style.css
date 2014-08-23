@@ -42,6 +42,7 @@ nav {
 li {
   transition: color .3s;
   list-style-type: none;
+  float: left; width: 20%; /* For non-flexers */
 }
 li:hover {
  color: white;
