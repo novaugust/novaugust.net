@@ -3,7 +3,13 @@ span, br, small {display: none;}
 body {
   width: 100vw;
   height: 100vh;
+  
+  display: -ms-Flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
+  
   background-size: cover;
   background-image: url(img/bg-16-2.jpg);
   background-repeat:no-repeat;
@@ -13,7 +19,13 @@ body {
 }
 main {
   margin: auto;
+  
+  display: -ms-Flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
+  
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
@@ -30,13 +42,25 @@ h1 {
   font-size: 7.5em;
 }
 ul {
+  
+  display: -ms-Flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
+  
   flex-grow: 1;
   justify-content: space-around;
 }
 nav {
   margin-top: 2em;
+  
+  display: -ms-Flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
+  
   align-items: stretch;
 }
 li {
