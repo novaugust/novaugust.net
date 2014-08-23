@@ -69,8 +69,23 @@ h1 {
 }
 @media only screen and (max-width: 650px) {
   .full-name, br {display: none;}
+  main {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+  }
   nav {order: 0;}
-  ul {flex-direction: row;}
+  ul {
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin: 0;
+    margin-top: 5em;
+    padding: 0;
+    flex-grow: 1;
+  }
+  ul::after{display: none;}
 }
 
 @keyframes fade-in {
