@@ -96,18 +96,6 @@ a, a:active{
     margin-right: 2.6em;
     position: relative;
   }
-  ul::after {
-    content: " ";
-    position: absolute;
-    top: 5px;right: 5px;left: 10px;bottom: 5px;
-    border: 5px solid rgba(255,255,255,.5);
-    border-left: none;
-    z-index: -1;
-    transition: border-color .6s;
-  }
-  ul:hover::after {
-    border-color: rgba(255,255,255,.8);
-  }
 }
 @keyframes fade-in {
   from {opacity: 0;}
