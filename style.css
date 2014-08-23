@@ -3,8 +3,9 @@ body {
   height: 100vh;
   background-size: cover;
   background-image: url(img/bg-16-2.jpg);
+  background-repeat:no-repeat;
   color: rgba(255, 255, 255, .8);
-  font-size:16px;
+  font-size:12px;
   font-family: 'Megrim', sans-serif;
   display: flex;
 }
