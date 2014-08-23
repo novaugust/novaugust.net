@@ -1,0 +1,95 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(img/bg-16-2.jpg);
+  color: rgba(255, 255, 255, .8);
+  font-size:16px;
+  font-family: 'Megrim', sans-serif;
+  display: flex;
+}
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  -webkit-animation: fade-in 2s;
+     -moz-animation: fade-in 2s;
+      -ms-animation: fade-in 2s;
+       -o-animation: fade-in 2s;
+          animation: fade-in 2s;
+}
+
+span {
+  letter-spacing: 6px
+}
+nav {
+  order: -1;
+  display: flex;
+  align-items: stretch;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2em 1em 1.2em 0;
+  margin-right: 2.6em;
+  position: relative;
+}
+ul::after {
+  content: " ";
+  position: absolute;
+  top: 5px;right: 5px;left: 10px;bottom: 5px;
+  border: 5px solid rgba(255,255,255,.5);
+  border-left: none;
+  z-index: -1;
+  transition: border-color .6s;
+}
+ul:hover::after {
+  border-color: rgba(255,255,255,.8);
+}
+ul li {
+  transition: color .3s;
+}
+ul li:hover {
+ color: white;
+}
+li {
+  list-style-type: none;
+}
+li a,
+li a:active{
+  color: inherit;
+}
+small { display: none}
+h1 {
+  font-size: 7.5em;
+}
+@media only screen and (max-width: 650px) {
+  body {margin-top:20px;flex-direction: column;}
+  .full-name, br {display: none;}
+  nav {order: 0;}
+  ul {flex-direction: row;}
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@-moz-keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@-webkit-keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@-ms-keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+@-o-keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
