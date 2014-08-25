@@ -7,7 +7,7 @@ span, br, small {
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -15,7 +15,7 @@ body {
   display: flex;
   background-image: url(img/bg-16-2.jpg);
   background-size: cover;
-  backgorund-repeat: no-repeat;
+  background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.8);
   font: 12px 'Megrim', sans-serif; }
 

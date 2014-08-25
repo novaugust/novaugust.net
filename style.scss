@@ -3,11 +3,11 @@
 span, br, small {display: none;}
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   @include flexbox;
   background-image: url(img/bg-16-2.jpg);
   background-size: cover;
-  backgorund-repeat: no-repeat;
+  background-repeat: no-repeat;
   color: rgba(255, 255, 255, .8);
   font: 12px 'Megrim', sans-serif;
 }
