@@ -1,0 +1,76 @@
+@import "flex.scss";
+* {padding: 0; margin: 0;}
+span, br, small {display: none;}
+body {
+  width: 100vw;
+  height: 100vh;
+  @include flexbox;
+  background-image: url(img/bg-16-2.jpg);
+  background-size: cover;
+  backgorund-repeat: no-repeat;
+  color: rgba(255, 255, 255, .8);
+  font: 12px 'Megrim', sans-serif;
+}
+main {
+  margin: auto;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(stretch);
+  text-align: center;
+  -webkit-animation: fade-in 2s;
+     -moz-animation: fade-in 2s;
+      -ms-animation: fade-in 2s;
+       -o-animation: fade-in 2s;
+          animation: fade-in 2s;
+}
+h1 {
+  font-size: 7.5em;
+}
+ul {
+  @include flexbox;
+  @include flex-grow(1);
+  @include justify-content(space-around);
+}
+nav {
+  margin-top: 2em;
+  
+  @include flexbox;
+  @include align-items(stretch);
+}
+li {
+  list-style-type: none;
+  -webkit-transition:color 3s;
+     -moz-transition:color 3s;
+       -o-transition:color 3s;
+          transition:color 3s;
+}
+li:hover {
+ color: white;
+}
+a, a:active{
+  color: inherit;
+}
+@media only screen and (min-width: 800px) and (min-height: 500px) {
+  body {font-size: 16px;}
+  span, br {display: initial;}
+  main {
+    text-align: left;
+    @include flex-direction(row);
+  }
+  nav {
+    @include order(-1);
+    margin-top: 0;
+  }
+  .space {
+    /* Get that perfect wedge shape off of "august" */
+    letter-spacing: 6px
+  }
+  ul {
+    padding: 1.2em 0;
+    margin-right: 2.6em;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+  }
+}
+@keyframes fade-in {from {opacity: 0;}to {opacity: 1;}}@-moz-keyframes fade-in {from {opacity: 0;}to   {opacity: 1;}}@-webkit-keyframes fade-in {from {opacity: 0;}to   {opacity: 1;}}@-ms-keyframes fade-in {from {opacity: 0;}to   {opacity: 1;}}@-o-keyframes fade-in {from {opacity: 0;}to   {opacity: 1;}}
