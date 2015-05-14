@@ -5,6 +5,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   @include flexbox;
+  background-color: gray;
   background-image: url(img/bg-16-2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,7 +35,7 @@ ul {
 }
 nav {
   margin-top: 2em;
-  
+
   @include flexbox;
   @include align-items(stretch);
 }
@@ -64,7 +65,7 @@ a, a:active{
   }
   .space {
     /* Get that perfect wedge shape off of "august" */
-    letter-spacing: 6px
+    letter-spacing: 6px;
   }
   ul {
     padding: 1.2em 0;
