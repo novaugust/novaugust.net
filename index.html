@@ -114,17 +114,23 @@
       align-items: stretch; }
 
     li {
-      list-style-type: none;
-      -webkit-transition: color 3s;
-      -moz-transition: color 3s;
-      -o-transition: color 3s;
-      transition: color 3s; }
-
-    li:hover {
-      color: white; }
+      list-style-type: none;}
 
     a, a:active {
-      color: inherit; }
+      color: rgba(255, 255, 255, 0.8);
+      -webkit-transition: color 1.5s;
+      -moz-transition: color 1.5s;
+      -o-transition: color 1.5s;
+      transition: color 1.5s; }
+
+    a:hover {
+      color: white; }
+
+    /* x-browser isn't a huge deal here. i'm too lazy to look it up */
+    .fa {
+      transition: transform .5s; }
+    a:hover .fa {
+      transform: scale(1.1);}
 
     @media only screen and (min-width: 800px) and (min-height: 500px) {
       body {
