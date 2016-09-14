@@ -1,6 +1,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
 RedirectMatch 301 /blog/?$ http://blog.novaugust.net/
+RedirectMatch 301 /blog/about/?$ http://blog.novaugust.net/about/
 RedirectMatch 301 /blog/\d{4}/\d{2}/([\w-]*?)/?$ http://blog.novaugust.net/$1
 RedirectMatch 301 /blog/tag/([\w-]*?)/?$ http://blog.novaugust.net/tag/$1
 RedirectMatch 301 /blog/category/([\w-]*?)/?$ http://blog.novaugust.net/tag/$1
